@@ -21,7 +21,7 @@ const Header = () => {
             <AppBar elevation={0} position='fixed' sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
                 <Toolbar>
                     <Button href="#" sx={{ textTransform: 'none' }}>
-                        <Typography sx={{ color: 'black', fontWeight: 500, fontSize: 20 }}>Travel Diary<span style={{ color: 'white' }}>/</span></Typography>
+                        <Typography sx={{ color: 'black', fontWeight: 500, fontSize: 20 }}>Karwaan<span style={{ color: 'white' }}>/</span></Typography>
                     </Button>
                     {
                         isMatch ? (
