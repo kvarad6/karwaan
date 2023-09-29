@@ -1,14 +1,28 @@
 import './App.css';
 import Box from '@mui/material/Box';
 import Header from './Components/Header';
-import Body from './Components/Body';
+import Home from './Components/Home';
+import { Routes, Route } from 'react-router-dom';
+import Signup from './Components/Signup';
+import Destinations from './Components/Destinations';
+import AboutUs from './Components/AboutUs';
+import Contact from './Components/Contact';
+import Login from './Components/Login';
 
 function App() {
   return (
     <>
       <Box>
-        <Header />
-        <Body />
+        {/* <Header /> */}
+        <Routes>
+          <Route path="/" element={<><Header /><Home /></>} />
+          <Route path="home" element={<><Header /><Home /></>} />
+          <Route path="aboutus" element={<><Header /><AboutUs /></>} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Login />} />
+          <Route path="destinations" element={<><Header /><Destinations /></>} />
+          <Route path="contact" element={<><Header /><Contact /></>} />
+        </Routes>
       </Box>
     </>
   );

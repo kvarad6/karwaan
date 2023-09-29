@@ -1,20 +1,22 @@
 import React from 'react'
 import { AppBar, Toolbar, Typography, Tab, Tabs, useMediaQuery, useTheme, Button } from '@mui/material'
 import DrawerComponent from './DrawerComponent';
+import { Link } from 'react-router-dom';
+
 
 
 const Header = () => {
-    const pages = { 'Home': '#home', 'About Us': '#aboutus', 'Destinations': '#destinations', 'Contact': '#contact', 'Signup': '#signup', 'Login': '#login' }
+    const pages = ['Home', 'AboutUs', 'Destinations', 'Contact', 'Signup', 'Login']
+
     const [value, setValue] = React.useState();
+
     const theme = useTheme();
     const isMatch = useMediaQuery(theme.breakpoints.down('md'));
-    function autoScroll() {
-        setTimeout(() => {
-            window.scrollBy(0, -140);
-        }, [0])
-
-
-    }
+    // function autoScroll() {
+    //     setTimeout(() => {
+    //         window.scrollBy(0, -140);
+    //     }, [0])
+    // }
 
     return (
         <>
@@ -29,7 +31,6 @@ const Header = () => {
                         ) : (
                             <Tabs sx={{ marginLeft: 'auto' }} value={value}
                                 onChange={(e, value) => {
-                                    autoScroll();
                                     setValue(value);
 
                                 }} TabIndicatorProps={{
@@ -38,9 +39,9 @@ const Header = () => {
                                     }
                                 }} textColor='white'>
                                 {
-                                    Object.entries(pages).map(([key, value]) => (
-                                        <Tab
-                                            sx={{
+                                    pages.map((page) => (
+                                        <Link to={`/${page}`}>
+                                            <Tab sx={{
                                                 fontSize: 15,
                                                 transition: '0.4s',
                                                 color: 'black',
@@ -48,12 +49,14 @@ const Header = () => {
                                                 ':hover': {
                                                     color: 'white'
                                                 }
-                                            }}
-                                            key={key}
-                                            label={key}
-                                            href={value}
-                                        >
-                                        </Tab>
+                                            }} key={page} label={page}>
+                                                {/* <Link to={`/${page}`}>
+                                                {page}
+                                            </Link> */}
+
+                                            </Tab>
+                                        </Link>
+
                                     ))
                                 }
                             </Tabs>
