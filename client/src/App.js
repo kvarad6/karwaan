@@ -7,7 +7,7 @@ import Signup from './Components/Signup';
 import Destinations from './Components/Destinations';
 import AboutUs from './Components/AboutUs';
 import Contact from './Components/Contact';
-import Login from './Components/Login';
+import Signin from './Components/Signin';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="home" element={<><Header /><Home /></>} />
           <Route path="aboutus" element={<><Header /><AboutUs /></>} />
           <Route path="signup" element={<Signup />} />
-          <Route path="login" element={<Login />} />
+          <Route path="signin" element={<Signin />} />
           <Route path="destinations" element={<><Header /><Destinations /></>} />
           <Route path="contact" element={<><Header /><Contact /></>} />
         </Routes>
