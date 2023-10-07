@@ -1,8 +1,22 @@
 import { Typography, Box, Paper, TextField, Grid, Button, Avatar, Link } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import lock from '../static/images/avatars/lock.png'
+import axios from 'axios'
 
 const Signup = () => {
+
+    const [firstName, setFirstName] = useState()
+    const [lastName, setLastName] = useState()
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        axios.post('', { firstName, lastName, email, password })
+            .then(result => console.log(result))
+            .catch(err => console.log(err))
+    }
+
     return (
         <div id='signup'>
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -21,7 +35,9 @@ const Signup = () => {
                                     id="signupFirstName"
                                     label="First Name"
                                     name="firstName"
-                                    type="search">
+                                    type="search"
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                >
                                 </TextField>
                             </Grid>
                             <Grid Item>
@@ -30,7 +46,9 @@ const Signup = () => {
                                     id="signupLastName"
                                     label="Last Name"
                                     name="lastName"
-                                    type="search">
+                                    type="search"
+                                    onChange={(e) => setLastName(e.target.value)}
+                                >
                                 </TextField>
                             </Grid>
                         </Grid>
@@ -40,7 +58,9 @@ const Signup = () => {
                                 id="signupEmail"
                                 label="Email"
                                 name="email"
-                                type="search">
+                                type="search"
+                                onChange={(e) => setEmail(e.target.value)}
+                            >
                             </TextField>
                         </Grid>
                         <Grid Item>
@@ -49,7 +69,9 @@ const Signup = () => {
                                 id="signupPassword"
                                 label="Password"
                                 name="password"
-                                type="search">
+                                type="search"
+                                onChange={(e) => setPassword(e.target.value)}
+                            >
                             </TextField>
                         </Grid>
                         <Grid Item>
@@ -62,9 +84,9 @@ const Signup = () => {
                             </TextField>
                         </Grid>
                         <Grid Item>
-                            <Button variant='contained' sx={{ width: 405 }}>SIGN UP</Button>
+                            <Button variant='contained' sx={{ width: 405 }} onSubmit={handleSubmit}>SIGN UP</Button>
                         </Grid>
-                        <Grid Item sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignSelf:'flex-end' }}>
+                        <Grid Item sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', alignSelf: 'flex-end' }}>
                             <Grid Item>
                                 <Link>Already have an account? Sign in</Link>
                             </Grid>
