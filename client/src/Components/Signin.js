@@ -29,7 +29,7 @@ const Signin = () => {
                                 id="signupPassword"
                                 label="Password"
                                 name="password"
-                                type="search">
+                                type="password">
                             </TextField>
                         </Grid>
                         <Grid Item sx={{ display: 'flex', flexDirection: 'column', alignSelf: 'flex-start' }}>
@@ -40,7 +40,7 @@ const Signin = () => {
                         <Grid Item>
                             <Button variant='contained' sx={{ width: 405 }}>SIGN IN</Button>
                         </Grid>
-                        <Grid Item sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap:5}}>
+                        <Grid Item sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: 5 }}>
                             <Grid Item>
                                 <Link>Forgot password?</Link>
                             </Grid>

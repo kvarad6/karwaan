@@ -69,7 +69,7 @@ const Signup = () => {
                                 id="signupPassword"
                                 label="Password"
                                 name="password"
-                                type="search"
+                                type="password"
                                 onChange={(e) => setPassword(e.target.value)}
                             >
                             </TextField>
@@ -80,7 +80,7 @@ const Signup = () => {
                                 id="signupConfirmPassword"
                                 label="Confirm Password"
                                 name="confirmPassword"
-                                type="search">
+                                type="password">
                             </TextField>
                         </Grid>
                         <Grid Item>
