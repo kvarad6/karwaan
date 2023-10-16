@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Typography, Grid, CardActionArea, Card, CardMedia, CardContent, Link,  } from '@mui/material'
+import { Box, Button, Typography, Grid, CardActionArea, Card, CardMedia, CardContent, Link, } from '@mui/material'
 
 import carImage from '../static/images/cards/carImage.png'
 import cameraImage from '../static/images/cards/cameraImage.png'
@@ -15,14 +15,14 @@ const Home = () => {
         <>
             <Box sx={{ width: '100%', height: 600, backgroundImage: 'url("/road.jpg")', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}>
                 <Grid sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', pt: 20, gap: 5 }}>
-                    <Grid Item>
+                    <Grid item>
                         <Typography sx={{ fontSize: 50, textAlign: 'center' }}>It's a big world. Let's explore it</Typography>
                     </Grid>
-                    <Grid Item sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: 10 }}>
-                        <Grid Item>
+                    <Grid item sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: 10 }}>
+                        <Grid item>
                             <Button variant="contained">Read Blog</Button>
                         </Grid>
-                        <Grid Item>
+                        <Grid item>
                             <Button variant="contained">Destinations</Button>
                         </Grid>
                     </Grid>
@@ -30,10 +30,10 @@ const Home = () => {
             </Box>
             <Box sx={{ width: '100%', height: 600 }}>
                 <Grid sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', gap: 60 }}>
-                    <Grid Item xs={6}>
+                    <Grid item xs={6}>
                         <Typography sx={{ fontSize: 30 }}>Hello Fellow Travelers!!</Typography>
                     </Grid>
-                    <Grid Item xs={6}>
+                    <Grid item xs={6}>
                         Image | vertical
                     </Grid>
                 </Grid>
@@ -41,7 +41,7 @@ const Home = () => {
             <Box sx={{ width: '100%', height: 400 }}>
                 <Typography sx={{ fontSize: 25, textAlign: 'center', mb: 10 }}>Featured</Typography>
                 <Grid sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: 10 }}>
-                    <Grid Item xs={4}>
+                    <Grid item xs={4}>
                         <Card sx={{ height: 230, width: 250 }}>
                             <CardActionArea />
                             <CardMedia
@@ -56,7 +56,7 @@ const Home = () => {
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid Item xs={4}>
+                    <Grid item xs={4}>
                         <Card sx={{ height: 230, width: 250 }}>
                             <CardActionArea />
                             <CardMedia
@@ -71,7 +71,7 @@ const Home = () => {
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid Item xs={4}>
+                    <Grid item xs={4}>
                         <Card sx={{ height: 230, width: 250 }}>
                             <CardActionArea />
                             <CardMedia
@@ -93,14 +93,14 @@ const Home = () => {
             </Box>
             <Box sx={{ width: '100%', height: 300, bgcolor: 'black', pt: 5 }}>
                 <Grid sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                    <Grid Item xs={3}>
+                    <Grid item xs={3}>
                         <Typography sx={{ fontSize: 25, color: 'white' }}>Karwaan</Typography>
                         {/* <Typography sx={{ fontSize: 15, color: 'white' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</Typography> */}
                     </Grid>
-                    <Grid Item xs={3}>
+                    <Grid item xs={3}>
                         <Typography sx={{ fontSize: 20, color: 'white' }}>Get in touch</Typography>
-                        <Grid sx={{display:'flex', flexDirection:'row', gap:2}}>
-                            <Grid Item xs={4}>
+                        <Grid sx={{ display: 'flex', flexDirection: 'row', gap: 2 }}>
+                            <Grid item xs={4}>
                                 <Link href="https://www.linkedin.com/in/varad-kulkarni-2001/" target="_blank">
                                     <LinkedInIcon fontSize='large' sx={{
                                         transition: '0.4s',
@@ -111,8 +111,8 @@ const Home = () => {
                                     }} />
                                 </Link>
                             </Grid>
-                            <Grid Item xs={4}>
-                                <Grid Item xs={3}>
+                            <Grid item xs={4}>
+                                <Grid item xs={3}>
                                     <Link href="https://www.instagram.com/_varad.kulkarni_/" target="_blank">
                                         <InstagramIcon fontSize='large' sx={{
                                             transition: '0.4s',
@@ -124,7 +124,7 @@ const Home = () => {
                                     </Link>
                                 </Grid>
                             </Grid>
-                            <Grid Item xs={4}>
+                            <Grid item xs={4}>
                                 <Link href="mailto:kvarad6@gmail.com" target="_blank">
                                     <EmailIcon fontSize='large' sx={{
                                         transition: '0.4s',
@@ -137,10 +137,10 @@ const Home = () => {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid Item xs={3}>
+                    <Grid item xs={3}>
                         <Typography sx={{ fontSize: 20, color: 'white' }}>Quick Links</Typography>
                     </Grid>
-                    <Grid Item xs={3}>
+                    <Grid item xs={3}>
                         <Typography sx={{ fontSize: 20, color: 'white' }}>Our Address</Typography>
                     </Grid>
                 </Grid>
