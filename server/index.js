@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 
 
-mongoose.connect('mongodb+srv://root:root@cluster0.pmm1cfh.mongodb.net/user-database')
+mongoose.connect('')
     .then(() => console.log('Connected!'));
 
 
