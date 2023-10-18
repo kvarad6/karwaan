@@ -8,6 +8,7 @@ import Destinations from './Components/Destinations';
 import AboutUs from './Components/AboutUs';
 import Contact from './Components/Contact';
 import Signin from './Components/Signin';
+// import Dashboard from './Components/Dashboard';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="signin" element={<Signin />} /> 
           <Route path="destinations" element={<><Header /><Destinations /></>} />
           <Route path="contact" element={<><Header /><Contact /></>} />
+          {/* <Route path="dashboard" element={<Dashboard />} /> */}
         </Routes>
       </Box>
     </>
